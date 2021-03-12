@@ -5,27 +5,15 @@ Projeto apresentado no dia 12 de março de 2021 para os estudantes da disciplina
 **Organização do projeto:**
 
 * br.puc.ed.le: Demonstração e implementação da Lista Encadeada
-* br.puc.ed.game: Classes para controle de registros de um painel de pontuação em ordem decrescente de um jogo utilizando um array.
-* br.puc.ed.ex3: Pacote para implementar a versão do painel do pacote br.puc.ed.game sem manter a lista ordenada (exercício 3).
 
 **Exercícios:**
 
-1) Implemente o método excluir na classe br.puc.ed.game.PainelPontuacao.
-2) Em br.puc.ed.game.GameApp, utilize a classe java.util.Random para remover aleatóriamente os elementos da lista até ela ficar vazia.
-3) Faça uma cópia das classes em br.puc.ed.game para br.puc.ed.ex3 e reimplemente o PainelPontuacao sem manter a lista ordenada.
-
-**Pré-Requisitos:**
-
-1) [Java Development Kit - JDK](https://adoptopenjdk.net/): (versão 11 ou superior)
-
-**Recomendações:**
-
-1) [IntelliJ IDEA](https://www.jetbrains.com/pt-br/idea/)  
-   1.1) [Link](https://www.jetbrains.com/community/education/#students) de aplicação para a licença educacional se desejar utilizar a versão Ultimate  
-2) Git   
-2.1) Windows / MacOS: https://git-scm.com/downloads  
-   2.2) Linux (Debian / Ubuntu):  <code>sudo apt install git</code>  
-   2.3) Linux (Fedora / Suse): <code>sudo dnf install git</code>  
+1) Implemente o método inserirNoFim, conforme algoritmo apresentado nos slides 10 e 11.
+2) Implemente o método excluirNoInicio, conforme algoritmo apresentado no slide 12.
+3) Implemente a variável qtdElementos e incremente/decremente seu valor nos métodos de inserção/exclusão. Crie o método getQtdElementos na ListaEncadeada.
+4) Adicione o ponteiro fim na lista encadeada. Altere os métodos de inclusão e exclusão para atualizar corretamente o ponteiro fim. Implemente o método public Node getFim(), que retorna o último nó da lista
+5) Implemente um algoritmo que retorne o penúltimo elemento da lista.
+6) Implemente um método para inserir um aeroporto após outro que já está na lista.
 
 **Referência:**
 
