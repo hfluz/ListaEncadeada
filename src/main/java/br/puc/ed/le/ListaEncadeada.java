@@ -2,25 +2,34 @@ package br.puc.ed.le;
 
 public class ListaEncadeada {
     private Node inicio;
+    private Node fim;
 
     public ListaEncadeada(){
         inicio = null;
     }
 
-    public void adicionarNoInicio(String codigoAeroporto, String nomeCidade){
+    public void inserirNoInicio(String codigoAeroporto, String nomeCidade){
 
     }
 
-    public void adicionarNoFim(String codigoAeroporto, String nomeCidade){
+    public void inserirNoFim(String codigoAeroporto, String nomeCidade){
 
     }
 
-    public Node excluirDoInicio(){
+    public Node excluirNoInicio(){
         return null;
     }
 
-    public void imprimirTodos(){
-
+    public boolean isVazia(){
+        return inicio == null;
     }
 
+    public void imprimirTodos(){
+        Node noAtual = inicio;
+        while (noAtual != null){
+            System.out.print(noAtual + ") -> ");
+            noAtual = noAtual.proximo;
+        }
+        System.out.print("\n\n");
+    }
 }
