@@ -1,30 +1,20 @@
 package br.puc.ed.le;
 
 public class Node {
-    protected String codigoAeroporto;
-    protected String nomeCidade;
+    protected Aeroporto aeroporto;
     protected Node proximo;
 
-    public Node(String codigoAeroporto, String nomeCidade){
+    public Node(Aeroporto aeroporto){
         proximo = null;
-        this.codigoAeroporto = codigoAeroporto;
-        this.nomeCidade = nomeCidade;
+        this.aeroporto = aeroporto;
     }
 
-    public String getCodigoAeroporto() {
-        return codigoAeroporto;
+    public Aeroporto getAeroporto() {
+        return aeroporto;
     }
 
-    public void setCodigoAeroporto(String codigoAeroporto) {
-        this.codigoAeroporto = codigoAeroporto;
-    }
-
-    public String getNomeCidade() {
-        return nomeCidade;
-    }
-
-    public void setNomeCidade(String nomeCidade) {
-        this.nomeCidade = nomeCidade;
+    public void setAeroporto(Aeroporto aeroporto) {
+        this.aeroporto = aeroporto;
     }
 
     public Node getProximo() {
@@ -37,6 +27,6 @@ public class Node {
 
     @Override
     public String toString() {
-        return "(" + codigoAeroporto + ", " + nomeCidade + ") ";
+        return "(" + aeroporto.getCodigo() + ", " + aeroporto.getNomeCidade() + ") ";
     }
 }

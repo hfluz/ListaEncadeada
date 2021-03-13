@@ -6,13 +6,14 @@ public class ListaEncadeada {
 
     public ListaEncadeada(){
         inicio = null;
+        fim = null;
     }
 
-    public void inserirNoInicio(String codigoAeroporto, String nomeCidade){
+    public void inserirNoInicio(Aeroporto aeroporto){
 
     }
 
-    public void inserirNoFim(String codigoAeroporto, String nomeCidade){
+    public void inserirNoFim(Aeroporto aeroporto){
 
     }
 
