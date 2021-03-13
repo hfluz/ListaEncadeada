@@ -12,6 +12,5 @@ public class MainApp {
         listaEncadeada.imprimirTodos();
         listaEncadeada.inserirNoFim("SSA", "Salvador");
         listaEncadeada.imprimirTodos();
-        listaEncadeada.imprimirTodos();
     }
 }
