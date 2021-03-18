@@ -12,5 +12,9 @@ public class MainApp {
         listaEncadeada.imprimirTodos();
         listaEncadeada.inserirNoFim(new Aeroporto("SSA", "Salvador"));
         listaEncadeada.imprimirTodos();
+        Node noExcluido = listaEncadeada.excluirNoInicio();
+        System.out.println("O aeroporto " + noExcluido.getAeroporto().getCodigo()
+            + " foi excluído com sucesso!");
+        listaEncadeada.imprimirTodos();
     }
 }
