@@ -16,5 +16,11 @@ public class MainApp {
         System.out.println("O aeroporto " + noExcluido.getAeroporto().getCodigo()
             + " foi excluído com sucesso!");
         listaEncadeada.imprimirTodos();
+        Integer tamanho = listaEncadeada.getTamanho();
+        System.out.println("O tamanho da lista encadeada é " + tamanho);
+        Node inicio = listaEncadeada.getInicio();
+        System.out.println("Início: " + inicio.getAeroporto().getCodigo());
+        Node fim = listaEncadeada.getFim();
+        System.out.println("Fim: " + fim.getAeroporto().getCodigo());
     }
 }

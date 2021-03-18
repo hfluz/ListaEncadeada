@@ -3,10 +3,12 @@ package br.puc.ed.le;
 public class ListaEncadeada {
     private Node inicio;
     private Node fim;
+    private Integer tamanho;
 
     public ListaEncadeada(){
         inicio = null;
         fim = null;
+        tamanho = 0;
     }
 
     public void inserirNoInicio(Aeroporto aeroporto){
@@ -16,6 +18,7 @@ public class ListaEncadeada {
         }
         novoNo.proximo = inicio;
         inicio = novoNo;
+        tamanho++;
     }
 
     public void inserirNoFim(Aeroporto aeroporto){
@@ -25,11 +28,13 @@ public class ListaEncadeada {
         }
         fim.proximo = novoNo;
         fim = novoNo;
+        tamanho++;
     }
 
     public Node excluirNoInicio(){
         Node noExcluido = inicio;
         inicio = inicio.proximo;
+        tamanho--;
         return noExcluido;
     }
 
@@ -44,5 +49,17 @@ public class ListaEncadeada {
             noAtual = noAtual.proximo;
         }
         System.out.print("\n\n");
+    }
+
+    public Integer getTamanho() {
+        return tamanho;
+    }
+
+    public Node getInicio() {
+        return inicio;
+    }
+
+    public Node getFim() {
+        return fim;
     }
 }
