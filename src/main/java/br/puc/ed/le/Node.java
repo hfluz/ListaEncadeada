@@ -27,6 +27,9 @@ public class Node {
 
     @Override
     public String toString() {
-        return "(" + aeroporto.getCodigo() + ", " + aeroporto.getNomeCidade() + ") ";
+        return "Node{" +
+            "codigoAeroporto='" + aeroporto.getCodigo() + '\'' +
+            ", nomeCidade='" + aeroporto.getNomeCidade() + '\'' +
+            '}';
     }
 }

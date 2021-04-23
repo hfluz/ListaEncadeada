@@ -3,12 +3,10 @@ package br.puc.ed.le;
 public class ListaEncadeada {
     private Node inicio;
     private Node fim;
-    private Integer tamanho;
+    private Integer qtdElementos;
 
     public ListaEncadeada(){
         inicio = null;
-        fim = null;
-        tamanho = 0;
     }
 
     public void inserirNoInicio(Aeroporto aeroporto){
@@ -18,7 +16,7 @@ public class ListaEncadeada {
         }
         novoNo.proximo = inicio;
         inicio = novoNo;
-        tamanho++;
+        qtdElementos++;
     }
 
     public void inserirNoFim(Aeroporto aeroporto){
@@ -28,13 +26,13 @@ public class ListaEncadeada {
         }
         fim.proximo = novoNo;
         fim = novoNo;
-        tamanho++;
+        qtdElementos++;
     }
 
-    public Node excluirNoInicio(){
+    public Node excluirDoInicio(){
         Node noExcluido = inicio;
         inicio = inicio.proximo;
-        tamanho--;
+        qtdElementos--;
         return noExcluido;
     }
 
@@ -45,14 +43,10 @@ public class ListaEncadeada {
     public void imprimirTodos(){
         Node noAtual = inicio;
         while (noAtual != null){
-            System.out.print(noAtual + " -> ");
+            System.out.print(noAtual.getAeroporto() + " -> ");
             noAtual = noAtual.proximo;
         }
         System.out.print("\n\n");
-    }
-
-    public Integer getTamanho() {
-        return tamanho;
     }
 
     public Node getInicio() {
@@ -61,5 +55,39 @@ public class ListaEncadeada {
 
     public Node getFim() {
         return fim;
+    }
+
+    /**
+     * Exercício 6
+     */
+    public Node getPenultimoNo(){
+        Node node = inicio;
+        while (node != null){
+            if(node.proximo == fim){
+                return node;
+            }
+            node = node.proximo;
+        }
+        return null;
+    }
+
+    /**
+     * Exercício 7
+     */
+    public void inserirAposAeroporto(String codigo, Aeroporto aeroporto){
+        Node novoNo = new Node(aeroporto);
+        Node noAtual = inicio;
+        while (noAtual != null){
+            if(noAtual.getAeroporto().getCodigo().equals(codigo)){
+                novoNo.proximo = noAtual.proximo;
+                noAtual.proximo = novoNo;
+                break;
+            }
+            noAtual = noAtual.proximo;
+        }
+    }
+
+    public int getQtdElementos() {
+        return qtdElementos;
     }
 }

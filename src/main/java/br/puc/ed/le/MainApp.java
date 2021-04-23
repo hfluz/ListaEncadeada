@@ -12,15 +12,16 @@ public class MainApp {
         listaEncadeada.imprimirTodos();
         listaEncadeada.inserirNoFim(new Aeroporto("SSA", "Salvador"));
         listaEncadeada.imprimirTodos();
-        Node noExcluido = listaEncadeada.excluirNoInicio();
-        System.out.println("O aeroporto " + noExcluido.getAeroporto().getCodigo()
-            + " foi excluído com sucesso!");
+        Node noExcluido = listaEncadeada.excluirDoInicio();
+        System.out.println("Nó excluído: " + noExcluido + "\n");
         listaEncadeada.imprimirTodos();
-        Integer tamanho = listaEncadeada.getTamanho();
-        System.out.println("O tamanho da lista encadeada é " + tamanho);
         Node inicio = listaEncadeada.getInicio();
-        System.out.println("Início: " + inicio.getAeroporto().getCodigo());
+        System.out.println("Início: " + inicio.getAeroporto() + "\n");
         Node fim = listaEncadeada.getFim();
-        System.out.println("Fim: " + fim.getAeroporto().getCodigo());
+        System.out.println("Fim: " + fim.getAeroporto());
+        Node penultimoNo = listaEncadeada.getPenultimoNo();
+        System.out.println("Penultimo: " + penultimoNo.getAeroporto());
+        listaEncadeada.inserirAposAeroporto("BPS", new Aeroporto("REC", "Recife"));
+        listaEncadeada.imprimirTodos();
     }
 }

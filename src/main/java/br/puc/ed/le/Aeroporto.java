@@ -25,4 +25,8 @@ public class Aeroporto {
         this.nomeCidade = nomeCidade;
     }
 
+    @Override
+    public String toString() {
+        return "(" + codigo + ", " + nomeCidade + ") ";
+    }
 }
